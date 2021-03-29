@@ -9,11 +9,11 @@ public class Score : MonoBehaviour
     public GameObject Enemy1;
 
     public static int scoreValue = 0;
-    Text score;
+    //Text score;
 
     private void Start()
     {
-        score = GetComponent<Text> ();
+        scoreText = GetComponent<Text> ();
     }
 
 

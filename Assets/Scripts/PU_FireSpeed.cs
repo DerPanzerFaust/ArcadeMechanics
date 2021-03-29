@@ -16,7 +16,6 @@ public class PU_FireSpeed : MonoBehaviour
     {
         
     }
-
     private void OnCollisionEnter(Collision col)
     {
         if (col.gameObject.tag == "Player")
