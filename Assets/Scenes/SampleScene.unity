@@ -5888,6 +5888,7 @@ MonoBehaviour:
   xPos: 0
   yPos: 0
   enemyCount: 0
+  waar: 1
 --- !u!4 &1657964562
 Transform:
   m_ObjectHideFlags: 0
