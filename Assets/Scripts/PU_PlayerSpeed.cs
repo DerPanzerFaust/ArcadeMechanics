@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player_Collision : MonoBehaviour
+public class PU_PlayerSpeed : MonoBehaviour
 {
+    public GameObject player;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,14 +16,18 @@ public class Player_Collision : MonoBehaviour
     {
         
     }
-
     private void OnCollisionEnter(Collision col)
     {
-        if (col.gameObject.tag == "Enemy")
+        if (col.gameObject.tag == "Player")
         {
+            speedChange();
             Destroy(gameObject);
-            //GetComponent<Movement_Player>().speed = 30;
         }
-            
+    }
+    public void speedChange()
+    {
+        //BulletSpawnerController speedAdd = new BulletSpawnerController();
+        //speedAdd.bulletSnelheid += .1f;
+        player.GetComponent<Movement_Player>().speed += 1f;
     }
 }
