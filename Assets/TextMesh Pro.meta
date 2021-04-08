@@ -1,4 +1,5 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 <<<<<<< HEAD:Assets/TextMesh Pro.meta
 guid: f54d1bd14bd3ca042bd867b519fee8cc
 folderAsset: yes
@@ -7,6 +8,15 @@ DefaultImporter:
 guid: 837c18264b2fcce4a9a71e7cfc071e1d
 PrefabImporter:
 >>>>>>> PowerUps:Assets/Prefabs/PowerUp_playerSpeed.prefab.meta
+=======
+<<<<<<< HEAD:Assets/TextMesh Pro/Documentation.meta
+guid: 8e7e8f5a82a3a134e91c54efd2274ea9
+=======
+guid: f54d1bd14bd3ca042bd867b519fee8cc
+>>>>>>> GameOverScreen:Assets/TextMesh Pro.meta
+folderAsset: yes
+DefaultImporter:
+>>>>>>> GameOverScreen
   externalObjects: {}
   userData: 
   assetBundleName: 

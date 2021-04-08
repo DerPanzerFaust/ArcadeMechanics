@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class Player_Collision : MonoBehaviour
 {
+    public GameObject GameOver;
+
+
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -21,7 +24,8 @@ public class Player_Collision : MonoBehaviour
         if (col.gameObject.tag == "Enemy")
         {
             Destroy(gameObject);
-            //GetComponent<Movement_Player>().speed = 30;
+
+            GameOver.SetActive(true);
         }
             
     }
