@@ -4811,8 +4811,8 @@ GameObject:
   - component: {fileID: 1090506263254229436}
   - component: {fileID: 1090506263254229437}
   - component: {fileID: 1090506263254229438}
-  - component: {fileID: 1090506263254229439}
   - component: {fileID: 1090506263254229433}
+  - component: {fileID: 349039296}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -4929,18 +4929,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePartical: {fileID: 1090506263212758416}
   speed: 10
---- !u!114 &1090506263254229439
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1090506263254229440}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8184749fe46630d48bdf6dc4536ca251, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1090506263254229433
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4954,3 +4942,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerBulletspawner: {fileID: 0}
+--- !u!114 &349039296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1090506263254229440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7994fa51bdd4cd94892d4e23b4edc233, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  currentHealth: 0
+  healthbar: {fileID: 0}

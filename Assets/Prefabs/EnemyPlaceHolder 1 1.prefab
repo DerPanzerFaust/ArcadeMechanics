@@ -524,7 +524,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8202578616463673356}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2289d3673fe6c604f836384f81cebb13, type: 3}
   m_Name: 
@@ -533,3 +533,4 @@ MonoBehaviour:
   xPos: 0
   yPos: 0
   enemyCount: 0
+  waar: 1

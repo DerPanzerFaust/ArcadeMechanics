@@ -8,30 +8,38 @@ public class Enemy_Spawner : MonoBehaviour
     public float xPos;
     public float yPos;
     public int enemyCount;
+    public bool waar = true;
     
 
     void Start()
     {
         enemyCount = GameObject.FindGameObjectsWithTag("Enemy").Length;
-        StartCoroutine(EnemyDrop()); 
+        InvokeRepeating("StartSpawning", 2.0f, 2.0f);
+
+
     }
     private void Update()
     {
-        enemyCount = GameObject.FindGameObjectsWithTag("Enemy").Length;
+       
+    }
+
+    private void StartSpawning()
+    {
+        StartCoroutine(EnemyDrop());
     }
     IEnumerator EnemyDrop()
     {
-      while (enemyCount < 3)
+        enemyCount = GameObject.FindGameObjectsWithTag("Enemy").Length;
+
+        while (enemyCount <= 3)
         {
-            
+                
             xPos = Random.Range(1.06f, 8.02f);
             yPos = Random.Range(-4.23f, 4.24f);
             Quaternion rot = Quaternion.Euler(0, 0, -90);
             GameObject obj = Instantiate(theEnemy, new Vector3(xPos, yPos, -3), rot);
-            //obj.transform.rotation = Quaternion.Euler(0, 0, -90.0f);
             yield return new WaitForSeconds(0.1f);
-            enemyCount += 1;
-
+            enemyCount = GameObject.FindGameObjectsWithTag("Enemy").Length;
         }
     }
 
