@@ -7,7 +7,7 @@ public class GameOver_Screen : MonoBehaviour
 {
     public void playAgain()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("BeroepsOpdrachtArcadeMechanics");
 
         //Score objct = new Score();
         //int resetScore = GetComponent<>()        
@@ -15,7 +15,8 @@ public class GameOver_Screen : MonoBehaviour
     }
     public void QuitGame()
     {
-        //Werkt niet 
-        Debug.Log("Quit");
+        Debug.Log("QUIT");
+
+        //Application.Quit(); PAS AAN HET EINDE GEBRUIKEN SLUIT DE GAME AF!
     }
 }

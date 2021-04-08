@@ -9,6 +9,8 @@ public class Player_Health : MonoBehaviour
     public int currentHealth;
     public Healtbar healthbar;
 
+    public GameObject GameOver;
+
     void Start()
     {
         currentHealth = maxHealth;
@@ -29,6 +31,7 @@ public class Player_Health : MonoBehaviour
         if(currentHealth == 0)
         {
             Destroy(gameObject);
+            GameOver.SetActive(true);
         }
     }
     
