@@ -28,7 +28,7 @@ public class Player_Health : MonoBehaviour
             TakeDamage(20);
         }
         healthbar.SetHealth(currentHealth);
-        if(currentHealth == 0)
+        if(currentHealth <= 0)
         {
             Destroy(gameObject);
             GameOver.SetActive(true);
@@ -47,6 +47,11 @@ public class Player_Health : MonoBehaviour
         if(collision.gameObject.tag == "Enemy")
         {
             TakeDamage(20);
+        }
+
+        if (collision.gameObject.tag == "BigEnemy")
+        {
+            TakeDamage(40);
         }
     }
 }
