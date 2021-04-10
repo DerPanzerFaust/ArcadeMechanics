@@ -421,6 +421,7 @@ GameObject:
   - component: {fileID: 8202578616463673359}
   - component: {fileID: 8202578616463673358}
   - component: {fileID: 8202578616463673357}
+  - component: {fileID: 3182878275078671165}
   m_Layer: 0
   m_Name: EnemyPlaceHolder 1 1
   m_TagString: Enemy
@@ -534,3 +535,17 @@ MonoBehaviour:
   yPos: 0
   enemyCount: 0
   waar: 1
+--- !u!114 &3182878275078671165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8202578616463673356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a83869301258ede49b13589efe748fd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BulletPrefab: {fileID: 7735932267757930929, guid: e5babcf6c8278f94ea4fcb539ada9aa3,
+    type: 3}
