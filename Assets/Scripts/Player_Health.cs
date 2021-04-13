@@ -19,7 +19,7 @@ public class Player_Health : MonoBehaviour
 
     void Update()
     {
-        if(gameObject.tag == "Enemy_Bullet")
+        if(gameObject.tag == "EnemyBullet")
         {
             TakeDamage(20);
         }
@@ -47,6 +47,15 @@ public class Player_Health : MonoBehaviour
         if(collision.gameObject.tag == "Enemy")
         {
             TakeDamage(20);
+        }
+    }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "EnemyBullet")
+        {
+            TakeDamage(20);
+            Destroy(other.gameObject);
         }
     }
 }

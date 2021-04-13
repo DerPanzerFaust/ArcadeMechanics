@@ -14,10 +14,10 @@ GameObject:
   - component: {fileID: 7735932267757930928}
   - component: {fileID: 5663132229941218973}
   - component: {fileID: -337365118667407584}
-  - component: {fileID: 8455587065879244621}
+  - component: {fileID: 2141268411487575225}
   m_Layer: 0
   m_Name: BulletPrefab
-  m_TagString: Bullet
+  m_TagString: EnemyBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -121,12 +121,12 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7735932267757930929}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
+  m_IsTrigger: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1.0000005, y: 2.0000007, z: 1.0000002}
   m_Center: {x: 0.000000059604666, y: 8.4703295e-22, z: -0.00000008940697}
---- !u!114 &8455587065879244621
+--- !u!114 &2141268411487575225
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -135,9 +135,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 7735932267757930929}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a52e637b5fc9493448ebd2cf0bef3182, type: 3}
+  m_Script: {fileID: 11500000, guid: 39be7f38cf9407e459db782bfe0bd958, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreText: {fileID: 0}
   rb: {fileID: 5663132229941218973}
-  speed: 50
+  speed: 20
