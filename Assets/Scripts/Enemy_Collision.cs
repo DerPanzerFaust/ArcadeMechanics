@@ -31,8 +31,6 @@ public class Enemy_Collision : MonoBehaviour
             Destroy(explotion, 2f);
 
             Destroy(col.gameObject);
-
-            EnemyHit.Play();
         }
 
     }
