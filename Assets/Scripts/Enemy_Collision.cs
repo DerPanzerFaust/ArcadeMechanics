@@ -5,11 +5,13 @@ using UnityEngine;
 public class Enemy_Collision : MonoBehaviour
 {
     public GameObject explosionPartical;
+    private AudioSource EnemyHit;
 
     // Start is called before the first frame update
     void Start()
     {
         //explosionPartical.SetActive(false);
+        EnemyHit = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -29,6 +31,8 @@ public class Enemy_Collision : MonoBehaviour
             Destroy(explotion, 2f);
 
             Destroy(col.gameObject);
+
+            EnemyHit.Play();
         }
 
     }
