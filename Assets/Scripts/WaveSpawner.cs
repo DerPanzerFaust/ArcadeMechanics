@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class WaveSpawner : MonoBehaviour
 {
-
+    public float xPos;
+    public float yPos;
     public enum SpawnState { SPAWNING, WAITING, COUNTING };
 
     [System.Serializable]
@@ -36,7 +37,7 @@ public class WaveSpawner : MonoBehaviour
         {
             if (!EnemyIsAlive())
             {
-                Debug.Log("Wave Completed");
+                WaveCompleted();
             }
             else
             {
@@ -50,34 +51,55 @@ public class WaveSpawner : MonoBehaviour
             {
                 
                 StartCoroutine(SpawnWave(waves[nextWave]));
+                
+
             }
-            else
-            {
-                waveCountdown -= Time.deltaTime;
-            }
+          
    
 
         }
+        else
+        {
+            waveCountdown -= Time.deltaTime;
+        }
 
 
- 
-     }
+
+    }
+
+    void WaveCompleted()
+    {
+        Debug.Log("Wave Completed!");
+        
+
+        state = SpawnState.COUNTING;
+        waveCountdown = timeBetweenWaves;
+
+        if (nextWave + 1 > waves.Length - 1)
+        {
+            nextWave = 0;
+            Debug.Log("ALL WAVE COMPLETE! Looping...");
+            
+        }
+
+        nextWave++;
+    } 
+
     bool EnemyIsAlive()
     {
         searchCountdown -= Time.deltaTime;
-
         if (searchCountdown <= 0f)
         {
 
 
             searchCountdown = 1f;
-            
-            return true;
-        }
-        if (GameObject.FindGameObjectWithTag("Enemy") == null)
-        {
+            if (GameObject.FindGameObjectWithTag("Enemy") == null)
+            {
+                return false;
+            }
             return false;
         }
+       
         return true;
 
     }
@@ -88,7 +110,7 @@ public class WaveSpawner : MonoBehaviour
         for (int i = 0; i < _wave.count; i++)
         {
             SpawnEnemy(_wave.enemy);
-            yield return new WaitForSeconds(1f / _wave.rate);
+            yield return new WaitForSeconds(0.5f/_wave.rate);
         }
 
 
@@ -101,8 +123,13 @@ public class WaveSpawner : MonoBehaviour
     void SpawnEnemy(Transform _enemy)
     {
         Debug.Log("Spawning Enemy:" + _enemy.name);
-        Instantiate(_enemy, transform.position, transform.rotation);
-        
+        //Instantiate(_enemy, transform.position, transform.rotation);
+        xPos = Random.Range(1.06f, 8.02f);
+        yPos = Random.Range(-4.23f, 4.24f);
+        Quaternion rot = Quaternion.Euler(0, 0, -90);
+        Instantiate(_enemy, new Vector3(xPos, yPos, -3), rot);
+
     }
+    
 
 }

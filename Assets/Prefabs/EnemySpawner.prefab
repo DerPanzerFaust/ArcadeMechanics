@@ -1,0 +1,84 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2893796262818310784
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2893796262818310786}
+  - component: {fileID: 2893796262818310785}
+  - component: {fileID: 2893796262818310787}
+  m_Layer: 0
+  m_Name: EnemySpawner
+  m_TagString: Enemy
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2893796262818310786
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2893796262818310784}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.69, y: 1.3, z: -3.000389}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2893796262818310785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2893796262818310784}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2289d3673fe6c604f836384f81cebb13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theEnemy: {fileID: 8202578616463673356, guid: 2ec9abfc470895e42b9cfd638617152f,
+    type: 3}
+  xPos: 0
+  yPos: 0
+  enemyCount: 0
+  waar: 1
+--- !u!114 &2893796262818310787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2893796262818310784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 256ffc9c81c7a5a43a824766ee7f62d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waves:
+  - name: Wave 1
+    enemy: {fileID: 8202578616463673362, guid: 2ec9abfc470895e42b9cfd638617152f, type: 3}
+    count: 4
+    rate: 0
+  - name: 'Wave 2 '
+    enemy: {fileID: 8202578616463673362, guid: 2ec9abfc470895e42b9cfd638617152f, type: 3}
+    count: 5
+    rate: 0
+  - name: Wave 3
+    enemy: {fileID: 8202578616463673362, guid: 2ec9abfc470895e42b9cfd638617152f, type: 3}
+    count: 6
+    rate: 0
+  - name: Wave 4
+    enemy: {fileID: 8202578616463673362, guid: 2ec9abfc470895e42b9cfd638617152f, type: 3}
+    count: 7
+    rate: 0
+  timeBetweenWaves: 5
+  waveCountdown: 0
+  state: 2
