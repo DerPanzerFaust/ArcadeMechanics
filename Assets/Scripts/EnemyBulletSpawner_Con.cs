@@ -9,7 +9,7 @@ public class EnemyBulletSpawner_Con : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float RandNumb = Random.Range(1, 700);
+        float RandNumb = Random.Range(1, 800);
         if(RandNumb == 1)
         {
             Shoot();
