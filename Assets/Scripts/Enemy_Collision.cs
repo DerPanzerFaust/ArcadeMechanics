@@ -24,13 +24,16 @@ public class Enemy_Collision : MonoBehaviour
     {
         if (col.gameObject.tag == "Bullet")
         {
+            EnemyHit.Play();
             Score.scoreValue += 10;
-            Destroy(gameObject);
+            
 
             GameObject explotion = (Instantiate(explosionPartical, this.transform.position, this.transform.rotation)).gameObject;
             Destroy(explotion, 2f);
 
             Destroy(col.gameObject);
+
+            Destroy(gameObject);
         }
 
     }

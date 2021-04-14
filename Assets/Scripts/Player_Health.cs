@@ -60,6 +60,7 @@ public class Player_Health : MonoBehaviour
         {
             TakeDamage(20);
             Destroy(other.gameObject);
+            PlayerHit.Play();
         }
     }
 }
